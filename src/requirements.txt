@@ -1,0 +1,7 @@
+matplotlib==3.5.3
+networkx==2.4
+numpy==1.21.6
+pyspark==3.3.0
+scikit_learn==1.1.2
+streamlit==1.13.0
+surpyval==0.10.8
