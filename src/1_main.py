@@ -10,6 +10,13 @@ from loader import Loader
 from Calculation import *
 from Graph import *
 import streamlit as st 
+from PIL import Image
+
+st.set_page_config(page_title="Series-Parellel System Models",layout="wide")
+
+image1 = Image.open('Screen1.jpg')
+image2 = Image.open('Screen2.jpg')
+image3 = Image.open('Screen3.jpg')
 st.title("Reliability System Analysis - Block based Simulation")
 
 st.write("This app uses equipment/assets physical time to fail data to create time to fail model, then create relationship between equipment/assets to create a system reliability model")
@@ -17,10 +24,12 @@ st.write("The system reliability model is then used to calculate the system reli
 
 
 #plot reliability vs time
+st.image(image1)
 TTF_file = st.file_uploader('Upload your failure data in csv file format in [Equipment],[Time to Failure(Days)] columns ')
 
+st.image(image2)
 item_config= st.file_uploader('Upload your item configuration in csv file format in [Equipment],[Model],[Parameter a],[Parameter b] ')
-
+st.image(image3)
 item_rel = st.file_uploader('Upload your item relationship in csv file format in [Equipment],[Linked Equipment 1],[Linked Equipment 2]... ')
 
 
