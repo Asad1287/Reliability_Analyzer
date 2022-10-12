@@ -1,5 +1,5 @@
 import numpy as np
-from pyspark import F
+
 import surpyval as surv
 
 import networkx as nx
